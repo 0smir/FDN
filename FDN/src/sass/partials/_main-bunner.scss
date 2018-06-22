@@ -1,0 +1,52 @@
+.main-bunner{
+  min-height: 348px;
+  position: relative;
+  &__bg{
+    background: #000;
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    &-grid{
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: minmax(293px, auto);
+    }
+  }
+  &__item{
+    &--left{
+      grid-column: span 8;
+      background: url("../img/home/bunner-1.jpg") no-repeat;
+      background-position: 100% 50%;
+      background-size: cover;
+      @include w1024{
+        grid-column: span 12;
+      }
+    }
+    &--right {
+      grid-column: 9/span 4;
+      background: url("../img/home/bunner-2.jpg") no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+      @include w1024 {
+        display: none;
+      }
+    }
+  }
+  &-content{
+    position: relative;
+    display: flex;
+    min-height: 348px;
+  }
+  &__title{
+    position: absolute;
+    bottom: 75px;
+    z-index: 3;
+    margin: 0 ;
+    padding: 15px 30px;
+    background: $color-white;
+    text-transform: uppercase;
+  }
+
+}

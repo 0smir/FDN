@@ -1,0 +1,29 @@
+.search-result{
+  &__block{
+    padding: 0 30px;
+    background: $color-white;
+    &-header{
+      margin-bottom: 50px;
+    }
+  }
+  &__result{
+    &-list{
+      padding-left: 20px;
+    }
+    &-item{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+      &-content{
+        margin-bottom: 15px;
+      }
+      .article-title,
+      .article-description{
+        margin-bottom: 15px;
+      }
+      .post-main__article-tag-link{
+        padding: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+mixin site-nav(data)
+    .site-nav-wrapper
+        .site-nav-header
+            h2.site-nav__title Navigation
+            .btn.site-nav__close
+                span.site-nav__close-stick
+                span.site-nav__close-stick
+        ul.site-nav
+            li.site-nav-item
+                a.site-nav__link(href="/") Home
+            li.site-nav-item.site-nav-item--second-leveled.site-nav-item--triangle
+                a.site-nav__link(href="/") Services
+                ul.site-sub-nav
+                    li.site-sub-nav-item
+                        a.site-sub-nav__link(href="/") General contrcting
+                    li.site-sub-nav-item
+                        a.site-sub-nav__link(href="/") Project design and engineering
+                    li.site-sub-nav-item
+                        a.site-sub-nav__link(href="/") Capital improvements
+            li.site-nav-item.site-nav-item--second-leveled.site-nav-item--triangle
+                a.site-nav__link(href="/") Our Works
+                ul.site-sub-nav
+                    li.site-sub-nav-item
+                        a.site-sub-nav__link(href="/") Our Works contrcting
+                    li.site-sub-nav-item
+                        a.site-sub-nav__link(href="/") Our design and engineering
+                    li.site-sub-nav-item
+                        a.site-sub-nav__link(href="/") Our capital improvements
+            li.site-nav-item.site-nav-item--second-leveled.site-nav-item--triangle
+                a.site-nav__link(href="/") News & Event
+                ul.site-sub-nav
+                    li.site-sub-nav-item
+                        a.site-sub-nav__link(href="/") General News
+                    li.site-sub-nav-item
+                        a.site-sub-nav__link(href="/") Project Event
+                    li.site-sub-nav-item
+                        a.site-sub-nav__link(href="/") Capital improvements News
+            li.site-nav-item
+                a.site-nav__link(href="/") Work with us
+            li.site-nav-item
+                a.site-nav__link(href="/") F.A.Q.
+            li.site-nav-item
+                a.site-nav__link(href="/") Contact us
+            li.site-nav-item.site-nav-item--second-leveled.site-nav-item--triangle
+                a.site-nav__link(href="/") Shop
+                ul.site-sub-nav
+                    li.site-sub-nav-item
+                        a.site-sub-nav__link(href="/") Shop General
+                    li.site-sub-nav-item
+                        a.site-sub-nav__link(href="/") Shop Project Event
+                    li.site-sub-nav-item
+                        a.site-sub-nav__link(href="/") Shop Capital
+        .site-nav-location
+            .icon.fa-map-marker.site-nav__map-marker
+            span.site-nav__address Stlemixthemes USA, Callifornia 20,  Firs Avenue, 2365 Calliforn,
+        .site-nav-conact-phone
+            span.site-nav__number 1 888 111 68 68
+        .site-nav-time-table
+            span.site-nav__worktime 6:00 - 18:00 sunday CLOSED
+        .site-nav-mail-address
+            a.site-nav__mail(href="mailto: info@stylemixthemes.com") info@stylemixthemes.com
+
+        form.form.form-search.site-nav-search
+            .form-row.site-nav-search__row
+                input.form-field.site-nav-search__field(type="text" placeholder="Search")
+                button.btn.btn-search.site-nav-search__btn-search(type="submit")
+                    i.icon.fa-search
+

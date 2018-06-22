@@ -1,0 +1,675 @@
+.post{
+  &-header{
+    &--top{
+      background: linear-gradient(to right, $color-gray 50%, $color-gray-light 50%);
+      @include w1200{
+        background: linear-gradient(to right, $color-gray 80%, $color-gray-light 20%);
+      }
+      @include w960{
+        background: $color-gray;
+      }
+    }
+    &--bottom{
+      min-height: 293px;
+      background-image: url('../img/home/bunner-1.jpg');
+      background-image: url('../img/home/bunner-1.jpg'), linear-gradient(to right, $color-gray 70%, $color-gray-light 30%);
+      background-repeat: no-repeat;
+      background-size: contain;
+      @include w960{
+        background-image: none;
+        background: linear-gradient(to right, $color-gray 80%, $color-gray-light 20%);
+      }
+      @include w768{
+        background: $color-gray;
+      }
+    }
+    &__content{
+      &--grid{
+        display: grid;
+        grid-template-columns: repeat(4, minmax(150px, 293px));
+        grid-auto-rows: minmax(293px, auto);
+        @include w960{
+          grid-template-columns: repeat(4, minmax(100px, 293px));
+        }
+        @include w600{
+          grid-template-columns: repeat(4, minmax(50px, 293px));
+        }
+        &:nth-of-type(1){
+          background: $color-gray;
+        }
+      }
+      &-slider{
+        grid-column: span 3;
+        background: $color-gray;
+        @include w768{
+          grid-column: span 4;
+        }
+      }
+      &-item{
+        &:nth-of-type(1){
+          grid-column: 1/span 3;
+          grid-row: 1/span 2;
+          @include w1024{
+            grid-column: 1/span 4;
+          }
+          @include w960{
+            grid-column: span 2;
+            grid-row: span 1;
+          }
+          @include w600{
+            grid-column: span 4;
+            grid-row: span 1;
+          }
+        }
+        &:nth-of-type(2){
+          grid-column: 1/span 1;
+          grid-row: 1;
+          z-index: 20;
+          @include w960{
+            grid-column: span 2;
+          }
+          @include w600{
+            grid-column: span 4;
+            grid-row: span 1;
+          }
+        }
+        &:nth-of-type(3),
+        &:nth-of-type(4){
+          @include w1024{
+            z-index: 20;
+          }
+        }
+        &:nth-of-type(3){
+          @include w1024 {
+            grid-column: 4/span 1;
+            grid-row: 1;
+          }
+          @include w960{
+            grid-column: 1/span 2;
+            grid-row: 2;
+          }
+          @include w600{
+            grid-column: span 4;
+            grid-row: span 1;
+          }
+        }
+        &:nth-of-type(4){
+          @include w1024 {
+            grid-column: 4/span 1;
+            grid-row: 2;
+          }
+          @include w960{
+            grid-column: span 2;
+          }
+          @include w600{
+            grid-column: span 4;
+            grid-row: span 1;
+          }
+        }
+      }
+    }
+    &__article{
+      &-header{
+        padding: 30px 0;
+        grid-column: span 3;
+        background: $color-gray;
+      }
+    }
+  }
+  &-main{
+    &__block{
+      &-content-grid{
+        display: grid;
+        grid-template-columns: repeat(4, minmax(150px, 293px));
+        grid-template-rows:  minmax(293px, auto);
+        @include w960{
+          grid-template-columns: repeat(4, minmax(100px, 293px));
+        }
+        @include w600{
+          grid-template-columns: repeat(4, minmax(50px, 293px));
+        }
+      }
+    }
+    &__article-content{
+      grid-column: span 3;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(150px, 293px));
+      grid-auto-rows:  minmax(293px, auto);
+      background: $color-white;
+      @include w960{
+        grid-column: span 4;
+        grid-template-columns: repeat(4, minmax(100px, 293px));
+      }
+      @include w600{
+        grid-template-columns: repeat(4, minmax(50px, 293px));
+      }
+    }
+    &__sidebar{
+      grid-column: span 1;
+      display: grid;
+      grid-template-columns: repeat(1, minmax(150px, 293px));
+      grid-auto-rows:  minmax(150px, 293px);
+      @include w960{
+        grid-template-columns: repeat(4, minmax(100px, 293px));
+        grid-column: span 4;
+      }
+      @include w600{
+        grid-template-columns: repeat(4, minmax(50px, 293px));
+      }
+      &-item{
+        position: relative;
+        @include w768{
+          grid-column: span 2;
+        }
+        @include w600{
+          grid-column: span 4;
+          grid-row: span 1;
+        }
+        &:nth-of-type(4){
+          grid-row: span 2;
+          @include w960{
+            grid-row: span 1;
+          }
+        }
+      }
+    }
+    &__article{
+      padding: 30px 30px 0;
+      grid-column: span 4;
+      @include w600{
+        padding: 30px 20px 0;
+      }
+      &-intro{
+        @extend .text--light;
+      }
+      &-blockquote{
+        position: relative;
+        padding-left: 55px;
+        margin-bottom: 100px;
+        font-size: 18px;
+        line-height: 1.666;
+        &:before{
+          position: absolute;
+          left: 0;
+          display: block;
+          content: '';
+          height: 100%;
+          width: 5px;
+          background: $color-gray-light;
+          @include w600{
+            width: 3px;
+          }
+        }
+        @include w600{
+          padding-left: 25px;
+          margin-bottom: 50px;
+          font-size: 15px;
+        }
+      }
+      &-text{
+        margin-bottom: 55px;
+        font-size: 18px;
+        line-height: 1.666;
+        @include w600{
+          font-size: 15px;
+        }
+      }
+      &-description{
+        &-text{
+          @extend .text--light;
+          font-size: 14px;
+          line-height: 1.714;
+        }
+        p{
+          @extend .post-main__article-description-text;
+          margin-bottom: 55px;
+          &:nth-of-type(even){
+            margin-bottom: 55px;
+            font-size: 18px;
+            line-height: 1.666;
+            color: $color-gray;
+          }
+        }
+      }
+      &-tag{
+        display: flex;
+        align-items: center;
+        margin-bottom: 60px;
+        @extend .text--light;
+        @include w600{
+          margin-bottom: 40px;
+        }
+        &-text{
+          margin-right: 20px;
+          font-weight: bold;
+        }
+        &-list{
+          display: flex;
+        }
+        &-item{
+          margin-right: 12px;
+        }
+        &-link{
+          display: block;
+          padding: 10px 15px;
+          border: 1px solid $color-gray-light;
+          @extend .text--light;
+          @include tr;
+          @include w600{
+            padding: 7px 10px;
+          }
+          &:hover,
+          &:focus,
+          &:active{
+            border: 1px solid $color-cyan;
+            color: $color-cyan;
+            @include tr;
+          }
+        }
+      }
+    }
+    &__intro{
+      &-text{
+        margin-bottom: 30px;
+      }
+    }
+    &__comment{
+      background: $color-white;
+      grid-column: span 4;
+    }
+    &__comment-form{
+      background: $color-gray;
+      grid-column: span 4;
+
+    }
+  }
+}
+.comment-form{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 293px));
+  grid-template-rows: repeat(3, minmax(45px, auto));
+  grid-auto-flow: column;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  @include w960{
+    grid-template-columns: repeat(3, minmax(100px, 293px));
+  }
+  @include w768{
+    grid-template-rows: repeat(6, minmax(45px, auto));
+    grid-auto-flow: column;
+    grid-column-gap: 0;
+  }
+  @include w600{
+    grid-template-columns: repeat(3, minmax(50px, 293px));
+  }
+
+  &__block{
+    padding: 60px 30px;
+    @include w600{
+      padding: 30px 15px;
+    }
+  }
+  &__title{
+    margin: 0 0 15px;
+    color: $color-white;
+    font-size: 28px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    &-description{
+      margin-bottom: 35px;
+      color: $color-gray-silver;
+      text-transform: uppercase;
+    }
+  }
+  &__row{
+    &--field,
+    &--textarea{
+      margin-bottom: 0;
+
+    }
+    &--field{
+      grid-column: span 1;
+      @include w768{
+        grid-column: span 3;
+      }
+    }
+    &--textarea{
+      grid-column: span 2;
+      grid-row: span 3;
+      @include w768{
+        grid-column: 1/span 3;
+        grid-row: 4/span 2;
+      }
+    }
+    &--btn-wrapper{
+      grid-column: 1/span 3;
+      grid-row: 4;
+      @include w768{
+        grid-row: 6/span 1;
+      }
+    }
+  }
+  &__field,
+  &__textarea{
+    background: rgba($color-gray-cloud, 0.2);
+    border: 1px solid transparent;
+    color: $color-white;
+    @include tr;
+    @include input-placeholder{
+      color: $color-gray-silver;
+      font-size: 14px;
+      text-transform: uppercase;
+      @include tr;
+    }
+    &.error{
+      border: $border-warning;
+      box-shadow: 0px 0px 4px 1px rgba($color-warning, .3);
+    }
+    &:hover,
+    &:focus,
+    &:active{
+      background: transparent;
+      border: 1px solid rgba($color-gray-cloud, 0.2);
+      @include tr;
+      @include input-placeholder{
+        color: $color-white;
+      }
+    }
+  }
+  &__submit{
+    @extend .btn-article;
+    margin-left:auto;
+    min-width: 145px;
+    background: $color-white;
+    color: $color-gray;
+    @include tr;
+    @include w768{
+      margin: 0 auto;
+    }
+    &:hover,
+    &:focus,
+    &:active{
+      background: $color-cyan;
+      @include tr;
+    }
+  }
+  &--logged{
+    grid-auto-flow: row;
+    grid-template-rows: repeat(4, minmax(45px, auto));
+    .comment-form__row-logged{
+      display: flex;
+      align-items: center;
+      grid-column: span 3;
+    }
+    .logged-in-as__link{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      min-width: 150px;
+      background: $color-cyan;
+      color: white;
+      margin: 0 150px 0 0;
+      @include w600{
+        margin: 0 auto 0 0;
+      }
+    }
+    .comment-form__btn-log-out{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      min-width: 100px;
+      @extend .post-main__article-tag-link;
+    }
+    .comment-form__row--textarea{
+      grid-column: span 3;
+      grid-row: 2/span 2;
+    }
+    .comment-form__btn-wrapper{
+      grid-row: span 1;
+    }
+  }
+}
+.comment{
+  &__block{
+    padding: 30px 30px 55px;
+    @include w768{
+      padding: 20px 15px 25px;
+    }
+    .children{
+      padding-left: 50px;
+      @include w600{
+        padding-left: 30px;
+      }
+    }
+  }
+  &-wrapper{
+    position: relative;
+    margin-bottom: 55px;
+    @include w600{
+      margin-bottom: 35px;
+    }
+    &::before{
+      position: absolute;
+      top: 75px;
+      left: 30px;
+      display: block;
+      content: '';
+      width: 1px;
+      height: calc(100% - 35px);
+      background: $color-gray-light;
+      @include w768{
+        left: 20px;
+      }
+      @include w600{
+        display: none;
+      }
+    }
+  }
+  &-header{
+    display: flex;
+    @include w600{
+      margin-bottom: 15px;
+    }
+  }
+  &-user{
+    &__img{
+      &-wrapper{
+        margin-right: 35px;
+        width: 60px;
+        height: 60px;
+        flex: none;
+        overflow: hidden;
+        @include w768{
+          margin-right: 15px;
+        }
+      }
+    }
+    &__name{
+      padding: 0;
+      margin-right: 10px;
+      flex: none;
+      @include w480{
+        margin-right: auto;
+      }
+    }
+  }
+  &-publication{
+    &__data{
+      @extend .text--light;
+      display: flex;
+      margin-right: auto;
+      font-size: 12px;
+      text-transform: uppercase;
+      @include w768{
+        margin: 0 auto;
+        flex-direction: column;
+      }
+
+      @include w480{
+        display: none;
+      }
+    }
+  }
+  &-link{
+    &-replay{
+      display: block;
+      margin-left: 15px;
+      min-width: 75px;
+      text-transform: uppercase;
+      @extend .text--light;
+      @include w600{
+        text-align: center;
+        min-width: 15px;
+      }
+      &:hover,
+      &:active,
+      &:focus{
+        color: $color-cyan;
+      }
+      &__icon{
+        margin-right: 5px;
+      }
+      &__text{
+        @include w600{
+          display: none;
+        }
+      }
+    }
+  }
+  &-body{
+    padding-left: 95px;
+    @include w768{
+      padding-left: 45px;
+    }
+    @include w600{
+      padding-left: 0;
+    }
+    p{
+      @extend .text--light;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-text{
+    @extend .text--light;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.commercial{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  &-title{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    margin: 0;
+    max-width: calc(100% - 60px);
+    color: $color-white;
+    font-size: 28px;
+    text-transform: uppercase;
+    @include w1024{
+      font-size: 24px;
+    }
+    @include w960{
+      top: 20px;
+      left: 15px;
+      max-width: calc(100% - 30px);
+      font-size: 20px;
+    }
+    &::before{
+      display: none;
+    }
+    &-img{
+      &-wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+
+      }
+    }
+  }
+}
+label{
+  &.error{
+    position: absolute;
+    bottom: -15px;
+    display: block;
+    font-size: 12px;
+    line-height: 1;
+    color: $color-warning;
+  }
+}
+.comment-form__reply-title{
+  display: flex;
+  margin-bottom: 20px;
+  color: $color-gray-silver;
+  a{
+    margin: 0 auto 0 5px;
+    color: $color-gray-silver;
+    @include tr;
+    &:hover,
+    &:focus,
+    &:active{
+      color: $color-cyan;
+      @include tr;
+    }
+  }
+}
+
+.comment-reply__btn-cancel{
+  display: flex;
+  a{
+    display: block;
+    margin: 0;
+    padding: 5px 10px;
+    width: 100%;
+    height: 100%;
+    background: $color-yellow;
+    font-size: 12px;
+    text-transform: uppercase;
+    @include tr;
+    &:hover,
+    &:focus,
+    &:active{
+      color: $color-white;
+      background: $color-cyan;
+    }
+  }
+}
+
+.comment-link-replay{
+  position: relative;
+  display: flex;
+  align-self: flex-start;
+  padding-left: 20px;
+  &:hover,
+  &:focus,
+  &:active{
+    .comment-link-replay__icon,
+    a{
+      color: $color-cyan;
+    }
+  }
+  &__icon{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  a{
+    color: $color-gray-mouse;
+    font-size: 14px;
+    font-family: $font-main;
+  }
+
+}

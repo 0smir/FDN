@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+    include partials/head
+    include partials/header
+    include partials/site-nav
+    include partials/personal-profile-main
+    include partials/footer
+    include partials/scripts
+    head
+        +head
+    body
+        +site-nav
+        .page
+            +header('logo--light')
+            .main
+                +personal-profile-main
+            +footer
+        +scripts

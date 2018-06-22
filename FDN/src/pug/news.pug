@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    include partials/head
+    include partials/header
+    include partials/site-nav
+    include partials/news-main
+
+    include components/date-slider
+    include components/post-slider
+    include components/subscription
+    include components/download-block
+    include components/coworking
+
+    include partials/footer
+    include partials/scripts
+    head
+        +head
+    body
+        +site-nav
+        .page
+            +header('logo--light')
+            .main
+                +news-main
+            +footer
+        +scripts

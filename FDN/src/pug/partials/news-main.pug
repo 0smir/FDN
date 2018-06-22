@@ -1,0 +1,83 @@
+mixin news-main(data)
+    .main-content.news-main-content
+        .main-bunner
+            .main-bunner__bg.main-bunner__bg-grid.news-bunner
+                .main-bunner__item.main-bunner__item--left
+                .main-bunner__item.main-bunner__item--right
+            .main-bunner__content.news-bunner__content
+                .container.news-container
+                    .main-bunner-content.news-main-bunner-content
+                        h2.title.main-bunner__title News and Events
+        .news-main__block
+            .container.news-container
+                .news-main__block-content.news-main-content__content-grid
+                    .news-info-list.news-info-list-grid
+                        .news-info-item
+                            .news-info-article
+                                .article.news-info-article__content
+                                    time.news-info-article__date 12 february, 2015
+                                    h3.news-info-article__title The Daily Reporter Selects Gilbane Building Company as 2014 Wisconsin Builder of the Year
+                                    .news-info-article__comment-info
+                                        .news-info-article__comment-info--count 23
+                                        .news-info-article__comment-info--text comments
+                                .news-info__img-wrapper
+                                    img.news-info__img(src='img/town.jpg' alt="illustration")
+                        .news-info-item
+                            .news-info-article
+                                .article.news-info-article__content
+                                    time.news-info-article__date 12 february, 2015
+                                    h3.news-info-article__title Project Design and Engineering Services copy
+                                    .news-info-article__comment-info
+                                        .news-info-article__comment-info--count 23
+                                        .news-info-article__comment-info--text comments
+                                .news-info__img-wrapper
+                                    img.news-info__img(src='img/home-marocco.jpg' alt="home-marocco")
+                        .news-info-item
+                            .news-info-article
+                                .article.news-info-article__content
+                                    time.news-info-article__date 12 february, 2015
+                                    h3.news-info-article__title Project Design and Engineering Services copy
+                                    .news-info-article__comment-info
+                                        .news-info-article__comment-info--count 23
+                                        .news-info-article__comment-info--text comments
+                                .news-info__img-wrapper
+                                    img.news-info__img(src='img/norway2.jpg' alt="city-on-water")
+                        .news-info-item
+                            .news-info-article
+                                .article.news-info-article__content
+                                    time.news-info-article__date 12 february, 2015
+                                    h3.news-info-article__title The Daily Reporter Selects Gilbane Building Company as 2014 Wisconsin Builder of the Year
+                                    .news-info-article__comment-info
+                                        .news-info-article__comment-info--count 23
+                                        .news-info-article__comment-info--text comments
+                                .news-info__img-wrapper
+                                    img.news-info__img(src='img/winter-decor.jpg' alt="winter-decor")
+                        .news-info-item
+                            .news-info-article
+                                .article.news-info-article__content
+                                    time.news-info-article__date 12 february, 2015
+                                    h3.news-info-article__title Project Design and Engineering Services copy
+                                    .news-info-article__comment-info
+                                        .news-info-article__comment-info--count 23
+                                        .news-info-article__comment-info--text comments
+                                .news-info__img-wrapper
+                                    img.news-info__img(src='img/winter-castle.jpg' alt="winter-castle")
+                        .news-info-item
+                            .news-info-article
+                                .article.news-info-article__content
+                                    time.news-info-article__date 12 february, 2015
+                                    h3.news-info-article__title The Daily Reporter Selects Gilbane Building Company as 2014 Wisconsin Builder of the Year
+                                    .news-info-article__comment-info
+                                        .news-info-article__comment-info--count 23
+                                        .news-info-article__comment-info--text comments
+                                .news-info__img-wrapper
+                                    img.news-info__img(src='img/ideas-for-decorating.jpg' alt="ideas-for-decorating")
+                    .sidebar.sidebar-grid.news__sidebar.news__sidebar-grid
+                        .sidebar-item.news__sidebar-item.date-slider-wrapper.date-slider--dark
+                                +date-slider('date-slider--dark')
+                        .sidebar-item.news__sidebar-item.download-price
+                            +download-block
+                        .sidebar-item.news__sidebar-item.subscribtion
+                            +subscription
+                        .sidebar-item.news__sidebar-item.coworking
+                            +coworking

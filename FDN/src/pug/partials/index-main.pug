@@ -1,0 +1,178 @@
+mixin index-main(data)
+    .main-content.index-main-content
+        .main-bunner.index-bunner
+            .main-bunner__bg.main-bunner__bg-grid.index-bunner__bg.index-bunner__bg-grid
+                .main-bunner__item.main-bunner__item--left.index-bunner__bg-item.index-bunner__item--left
+                .main-bunner__item.main-bunner__item--right.index-bunner__bg-item.index-bunner__item--right
+            .main-bunner__content.index-bunner__content
+                .container.index-container
+                    .index-bunner__content-grid
+                        .bunner-item.index-bunner__item
+                            .article.index-bunner-article
+                                h3.title.title--dark.index-bunner-article__title BUILDING THE  WORLD AROUND US
+                                .article-description
+                                    p.index-bunner-article__description-text Still other clients have reserved for capital improvement proje. Still other clients have reserved for capital improvement proje
+                                .btn-wrapper.index-bunner__btn-wrapper
+                                    a.btn.btn-article.btn--dark.index-bunner__btn--more(href="/") Read more
+                        .bunner-item.index-bunner__item
+                            .date-slider-wrapper.date-slider--light.index-bunner__date-slider
+                                +date-slider('date-slider--light')
+                        .bunner-item.index-bunner__item
+                            +video
+
+        .index-main__block
+            .container.index-container
+                .index-main__block-content.index-main__block-content-grid
+                    .index-main__block-content-item
+                        span.tech 1
+                        .article.index-main__article.index-main__article--services
+                            h3.article-title.article-title--large Our services
+                            .article-description
+                                p.text--light.article-description__text
+                                    | This allows the Design and Engineering team to originate drawin. This allows the Design and Engineering team to originate drawin copy.
+                    .index-main__block-content-item
+                        span.tech 2
+                        .img-wrapper.index-main__img-wrapper.index-main__article-img
+                            img.img(src="img/home/home-1.jpg" alt="img")
+                    .index-main__block-content-item
+                        span.tech 3
+                        .article.index-main__article
+                            h3.article-title Capital  Improvements
+                            .article-description
+                                p.text--light.article-description__text
+                                    | This allows the Design and Engineering team to originate drawin. This allows the Design and Engineering team to originate drawin copy.
+                    .index-main__block-content-item
+                        span.tech 4
+                        .img-wrapper.index-main__img-wrapper.index-main__article-img
+                            img.img(src="img/home/home-2.jpg" alt="img")
+                    .index-main__block-content-item
+                        span.tech 5
+                        .date-slider-wrapper.date-slider--light.index-main__block-content-date-slider
+                            +date-slider('date-slider--light date-slider--bright')
+                    .index-main__block-content-item
+                        span.tech 6
+                        .article.index-main__article
+                            h3.article-title Project design  and engineering
+                            .article-description
+                                p.text--light.article-description__text
+                                    | This allows the Design and Engineering team to originate drawin. This allows the Design and Engineering team to originate drawin copy.
+                    .index-main__block-content-item
+                        span.tech 7
+                        .img-wrapper.index-main__img-wrapper.index-main__article-img
+                            img.img(src="img/home/home-3.jpg" alt="img")
+                    .index-main__block-content-item
+                        span.tech 8
+                        .article.index-main__article
+                            h3.article-title Construction
+                            .article-description
+                                p.text--light.article-description__text
+                                    | This allows the Design and Engineering team to originate drawin. This allows the Design and Engineering team to originate drawin copy.
+                    .index-main__block-content-item
+                        .download-price
+                            +download-block
+                        span.tech 9
+                    .index-main__block-content-item
+                        span.tech 10
+                        +contact-us
+                    .index-main__block-content-item
+                        span.tech 11
+                        +search
+                    .index-main__block-content-item
+                        span.tech 12
+                        .review
+                            .review-item
+                                .review-user
+                                    .review-user__photo
+                                        img.review-user__img.img(src="img/reviews/review-1.jpg" alt="Martin H. Jhonsons")
+                                    h4.review-user__nmame Martin H. Jhonsons
+                                    .review-user__rate
+                                        span.fa-star.review-user__rate-icon
+                                        span.fa-star.review-user__rate-icon
+                                        span.fa-star.review-user__rate-icon
+                                        span.fa-star.review-user__rate-icon
+                                        span.fa-star-o.review-user__rate-icon
+                                .review__descriotion
+                                    p.review__descriotion-text
+                                        | When selecting DMCS as the design-build team, clients benefit.When selecting DMCS as the design-build team, clients benefit.
+                                        | When selecting DMCS as the design-build team, clients benefit
+                    .index-main__block-content-item
+                        span.tech 13
+                        .article.index-main__article.index-main__article--about-company
+                            h3.article-title.article-title--large Your building is in good hands
+                            .article-description
+                                p.article-description__text
+                                    | Our mission is to provide the highest level of service for our.Our mission is to provide the highest level of service for our.
+                            .btn-wrapper.index-bunner__btn-wrapper
+                                a.btn.btn-article.btn--dark(href="/") about company
+                    .index-main__block-content-item
+                        span.tech 14
+                        .review.review-slider-wrapper
+                            +review-slider
+                    .index-main__block-content-item.short-info-block
+                        span.tech 15
+                        .short-info-item.short-info-item--export-witness
+                            span.flash.short-info-icon
+                            .short-info__count 55 000
+                            .short-info__text Expert Witness
+                        .short-info-item.short-info-item--construction
+                            span.drop.short-info-icon
+                            .short-info__count 124 600
+                            .short-info__text Construction
+                        .short-info-item.short-info-item--procurement
+                            span.settings.short-info-icon
+                            .short-info__count 18 000
+                            .short-info__text Procurement
+                        .short-info-item.short-info-item--managments
+                            span.light.short-info-icon
+                            .short-info__count 78 150
+                            .short-info__text Project Managments
+                    .index-main__block-content-item
+                        .posts
+                            +post-slider("popular posts")
+                        span.tech 16
+                    .index-main__block-content-item
+                        span.tech 17
+                        .review
+                           .review-item
+                               .review-user
+                                   .review-user__photo
+                                       img.review-user__img.img(src="img/reviews/review-2.jpg" alt="Martin H. Jhonsons")
+                                   h4.review-user__nmame Martin H. Jhonsons
+                                   .review-user__rate
+                                       span.fa-star.review-user__rate-icon
+                                       span.fa-star.review-user__rate-icon
+                                       span.fa-star.review-user__rate-icon
+                                       span.fa-star.review-user__rate-icon
+                                       span.fa-star.review-user__rate-icon
+                               .review__descriotion
+                                   p.review__descriotion-text
+                                       | When selecting DMCS as the design-build team, clients benefit.
+                                       | When selecting DMCS as the design-build team, clients benefit.
+                    .index-main__block-content-item
+                        span.tech 18
+                        .article.index-main__article.index-main__article--improvements
+                            h3.article-title Capital  Improvements
+                            .article-description
+                                p.text--light.article-description__text
+                                    | This allows the Design and Engineering team to originate drawin. This allows the Design and Engineering team to originate drawin copy.
+                                    | This allows the Design and Engineering team to originate drawin.
+                                p.text--light.article-description__text
+                                    | This allows the Design and Engineering team to originate drawin. This allows the Design and Engineering team to originate drawin copy.
+                            .btn-wrapper.index-bunner__btn-wrapper
+                                a.btn.btn-article.btn--yellow.index-main__btn.index-main__btn--view(href="/") view project
+                    .index-main__block-content-item
+                        span.tech 19
+                        .img-wrapper.index-main__img-wrapper.index-main__article-img
+                            img.img(src="img/home/home-4.jpg" alt="img")
+                    .index-main__block-content-item
+                        .coworking.services-coworking
+                             +coworking
+                        span.tech 20
+                    .index-main__block-content-item
+                        .subscribtion.services-subscribtion
+                            +subscription
+                        span.tech 21
+                    .index-main__block-content-item
+                        .date-slider-wrapper.date-slider--light.index-main__block-date-slider
+                            +date-slider('date-slider--light')
+                        span.tech 22

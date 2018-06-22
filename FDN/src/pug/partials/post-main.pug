@@ -1,0 +1,123 @@
+mixin post-main(data)
+    .main-content.post-main-content
+        .main-bunner.post-bunner
+            .main-bunner__bg.main-bunner__bg-grid.post-bunner__bg-grid
+                .main-bunner__item.main-bunner__item--left.post-bunner__bg-item.post-bunner__bg-item--left
+                .main-bunner__item.main-bunner__item--right.post-bunner__bg-item.post-bunner__bg-item--right
+            .main-bunner__content.post-bunner__content
+                .container.post-container
+                    .main-bunner-content.post-bunner-content
+                        h2.main-bunner__title.post-bunner__title News & events
+        .post-main__block
+            .post-header
+                .post-header--top
+                    .container.post-container
+                        .post-header__content.post-header__content--grid
+                            .post-header__content-slider
+                                +blog-slider
+                .post-header--bottom
+                    .container.post-container
+                        .post-header__content.post-header__content--grid
+                            .post-header__content-item
+                                .img-wrapper.post-main__img-wrapper.post-main__article-img
+                                    img.img(src="img/post/post-1.jpg" alt="img")
+                            .post-header__content-item
+                                .date-slider-wrapper.date-slider--light
+                                    +date-slider('date-slider--light date-slider--bright')
+                            .post-header__content-item
+                                +download-block
+                            .post-header__content-item
+                                .posts
+                                    +post-slider("popular posts")
+            .container.post-container
+                .post-main__block-content.post-main__block-content-grid
+                    .post-main__article-content
+                        .post-main__article
+                            .post-main__article-intro
+                                p.post-main__intro-text
+                                    | Hoffman uses the latest technology to achieve better buildings. We pioneered computer-aided 3D design collaboration on projects like the Experience Music Project and Seattle Central Library. Today we leverage a suite of Building Information Modeling (BIM) tools to enhance collaboration among designers, owners, subcontractors, and suppliers. Our investment in cutting-edge technologies means fewer RFIs and change orders, and faster completion dates.
+                                p.post-main__intro-text
+                                    |3D laser scanning ensures we understand the as-built conditions of a project site before we begin. We built our projects virtually first.
+                            .post-main__article-blockquote
+                                p.post-main__blockquote-text
+                                    |In the world of construction, certain qualifications must be met in order to supervise the physical execution of projects. Architects, Engineers and General Contractors are the licensed individuals qualified to manage construction projects.
+                            article.post-main__article-block
+                                h3.article-title Project design and engineering
+                                .post-main__article-description
+                                    p.post-main__article-text.post-main__article-description-text
+                                        | Hoffman uses the latest technology to achieve better buildings. We pioneered computer-aided 3D design collaboration on projects like the Experience Music Project and Seattle Central Library. Today we leverage a suite of Building Information Modeling (BIM) tools to enhance collaboration among designers, owners, subcontractors, and suppliers. Our investment in cutting-edge technologies means fewer RFIs and change orders, and faster completion dates.
+                                    p.post-main__article-text
+                                        |3D laser scanning ensures we understand the as-built conditions of a project site before we begin. We built our projects virtually first, ensuring maximum efficiency when we mobilize on the site. BIM models are shared among suppliers, facilitating off-site fabrication and assembly, which reduces site congestion.
+                                    p.post-main__article-text.post-main__article-description-text
+                                        | Hoffman uses the latest technology to achieve better buildings. We pioneered computer-aided 3D design collaboration on projects like the Experience Music Project and Seattle Central Library.
+                            .post-main__article-tag
+                                .post-main__article-tag-text Tags
+                                ul.post-main__article-tag-list
+                                    li.post-main__article-tag-item
+                                        a.post-main__article-tag-link(hrref="#") winter
+                                    li.post-main__article-tag-item
+                                        a.post-main__article-tag-link(hrref="#") is coming
+                        .post-main__comment.comment__block
+                            h2.title.comment-title
+                                span.comment-title__text Comments (
+                                    span.comment__count 1
+                                    |)
+                            ul.comment-list
+                                li.comment-list__item
+                                    .comment.comment-wrapper
+                                        .comment-header
+                                            .comment-user__img-wrapper
+                                                img.comment-user__img(src="img/reviews/review-2.jpg" alt="user")
+                                            h3.article-title.comment-user__name Jordan Belford
+                                            .comment-publication__data
+                                                span.comment-publication__data-text Posted at
+                                                time.comment-publication__data-time(datetime="2014-12-06T15:32:49") 15:32 h, 06 December
+                                            a.comment-link-replay(href="#")
+                                                span.icon.fa-reply.comment-link-replay__icon
+                                                span.comment-link-replay__text Replay
+                                        .comment-body
+                                            p.comment-text
+                                                | ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                                li.comment-list__item
+                                    .comment.comment-wrapper
+                                        .comment-header
+                                            .comment-user__img-wrapper
+                                                img.comment-user__img(src="img/reviews/review-1.jpg" alt="user")
+                                            h3.article-title.comment-user__name Jordan Belford
+                                            .comment-publication__data
+                                                span.comment-publication__data-text Posted at
+                                                time.comment-publication__data-time(datetime="2014-12-06T15:32:49") 15:32 h, 06 December
+                                            a.comment-link-replay(href="#")
+                                                span.icon.fa-reply.comment-link-replay__icon
+                                                span.comment-link-replay__text Replay
+                                        .comment-body
+                                            p.comment-text
+                                                | ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+
+                        .post-main__comment-form.comment-form__block
+                            h2.title.comment-form__title Leave a Reply
+                            p.title-description.comment-form__title-description Your email address will not be published.
+                            form.form.comment-form(method="POST")
+                                .form-row.comment-form__row--field
+                                    input.form-field.comment-form__field(type='text' name='name' placeholder='Name')
+                                .form-row.comment-form__row--field
+                                    input.form-field.comment-form__field(type='mail' name='email' placeholder='E-mail')
+                                .form-row.comment-form__row--field
+                                    input.form-field.comment-form__field(type='text' name='site' placeholder='Website')
+                                .form-row.comment-form__row--textarea
+                                    textarea.form-textarea.comment-form__textarea(type='text' name='message' placeholder='Message')
+                                .form-row.comment-form__row--btn-wrapper.comment-form__btn-wrapper
+                                    button.btn.comment-form__submit Add comment
+                    .post-main__sidebar
+                        .post-main__sidebar-item
+                            +instagram
+                        .post-main__sidebar-item
+                            .img-wrapper.index-main__img-wrapper.index-main__article-img
+                                img.img(src="img/home/home-1.jpg" alt="img")
+                        .post-main__sidebar-item
+                            +video
+                        .post-main__sidebar-item
+                            .commercial
+                                .commercial-img-wrapper
+                                    img.commercial-img(src="img/post/commercial-1.jpg" alt="building")
+                                h3.title.commercial-title The best architects of the world advise our company

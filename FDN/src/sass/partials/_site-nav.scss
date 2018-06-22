@@ -1,0 +1,201 @@
+.site-nav{
+  margin-bottom: 75px;
+  &-wrapper{
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: -315px;
+    padding: 55px  30px;
+    height: 100%;
+    width: 315px;
+    background: $color-white;
+    box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.22);
+    color: $color-gray-cloud;
+    overflow: auto;
+    @include tr;
+      &.push{
+      right: 0;
+      @include tr;
+    }
+    @include w600{
+      padding: 35px  20px;
+      width: 240px;
+    }
+  }
+  &-header{
+    position: relative;
+  }
+  &__title{
+    margin-top: 0;
+    font-weight: bold;
+    color: $color-main;
+    text-transform: uppercase;
+    &--registration{
+      margin: 0 0 20px 0;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+  }
+  &__close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 26px;
+    width: 26px;
+    &-stick{
+      position: absolute;
+      display: block;
+      width: 30px;
+      height: 4px;
+      background: $color-main;
+      &:first-of-type{
+        transform: rotate(45deg);
+      }
+      &:last-of-type{
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &-item{
+    position: relative;
+    border-bottom: 1px solid $color-gray-cloud;
+    &--second-leveled{
+
+    }
+    &--triangle::before{
+      position: absolute;
+      top: 25px;
+      right: 5px;
+      display: block;
+      content: '';
+      border: 5px solid transparent;
+      border-left: 5px solid $color-gray-cloud;
+      @include tr;
+    }
+    &.active{
+      &.site-nav-item--triangle::before{
+        transform: rotate(90deg);
+      }
+    }
+  }
+  &__link{
+    position: relative;
+    display: flex;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: normal;
+    color: $color-gray-cloud;
+    &:hover,
+    &:focus,
+    &:active{
+      color: $color-cyan;
+    }
+    &.active{
+      color: $color-cyan;
+      &~.site-sub-nav{
+        display: flex;
+      }
+    }
+  }
+  &-location{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+  }
+  &__map-marker{
+    font-size: 20px;
+  }
+  &-conact-phone,
+  &-time-table{
+    margin-bottom: 10px;
+  }
+  &-mail-address{
+    margin-bottom: 80px;
+  }
+  &__mail{
+    color: $color-cyan;
+    text-decoration: underline;
+  }
+  &-search{
+    &__row{
+      border: 1px solid $color-gray-cloud;
+    }
+    &__btn-search{
+      @extend .btn--transparent;
+      color: $color-gray-cloud;
+    }
+  }
+}
+
+.site-sub-nav{
+  display: none;
+  flex-direction: column;
+  padding: 10px 0;
+  border-top: 1px solid $color-gray-cloud;
+  &-item{
+
+  }
+  &__link{
+    display: flex;
+    padding: 10px 0 10px 20px;
+    font-weight: normal;
+    color: $color-gray-cloud;
+    &:hover,
+    &:focus,
+    &:active{
+      color: $color-cyan;
+    }
+  }
+
+}
+
+.log-in-block{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 75px;
+  &__registration{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    .link__register{
+      display: inline-block;
+      padding: 10px;
+      min-width: 100%;
+      background: $color-cyan;
+      color: $color-white;
+      text-align: center;
+      border: none;
+      @include tr;
+      &:hover,
+      &:focus,
+      &:active{
+        background: $color-gray;
+        color: $color-white;
+        @include tr;
+      }
+    }
+    &--user-logged{
+      display: flex;
+      justify-content:space-between;
+      .link__log-in,
+      .link__register{
+        display: inline-block;
+        padding: 10px;
+        color: $color-gray-cloud;
+        border: 1px solid $color-gray-light;
+        text-align: center;
+        @include tr;
+        &:hover,
+        &:focus,
+        &:active{
+          color: $color-cyan;
+          border: 1px solid $color-cyan;
+          @include tr;
+        }
+      }
+    }
+  }
+}
+

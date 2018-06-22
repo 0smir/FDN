@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    include partials/head
+    include partials/header
+    include partials/site-nav
+    include partials/index-main
+    include components/date-slider
+    include components/post-slider
+    include components/subscription
+    include components/download-block
+    include components/coworking
+    include components/video
+    include components/contact-us
+    include components/search
+    include components/review-slider
+    include partials/footer
+    include partials/scripts
+    head
+        +head
+    body
+        +site-nav
+        .page
+            +header('logo--dark')
+            .main
+                +index-main
+            +footer
+        +scripts

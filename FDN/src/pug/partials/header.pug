@@ -1,0 +1,16 @@
+mixin header(dateLogoClass)
+    header.header
+        .container.header-container
+            a.logo(class = dateLogoClass href="/")
+                h1.logo-text FDE
+            .header-controls
+                .social-link-list
+                    a.social-link
+                        i.icon.fa-facebook(href="/")
+                    a.social-link
+                        i.icon.fa-twitter(href="/")
+                .btn.btn-cart
+                    i.icon.fa-shopping-cart
+                    .btn-cart__counter 99
+                .btn.btn-nav
+                    i.icon.fa-bars

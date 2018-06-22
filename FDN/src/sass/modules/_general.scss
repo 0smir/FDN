@@ -1,0 +1,483 @@
+*{
+  box-sizing: border-box;
+}
+html, body{
+  min-height: 100%;
+  height: 100%;
+}
+body {
+  font-family: $font-main;
+  font-size: $font-size;
+  background: $color-gray-light;
+  color: $color-main;
+  line-height: $line-height;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+
+p {
+  margin-top: 0;
+}
+
+img {
+  vertical-align: top;
+}
+a {
+  text-decoration: none;
+  //color: $color-main;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-weight: normal;
+}
+
+h3{
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+p{
+  margin-bottom: 0;
+}
+a{
+  cursor: pointer;
+}
+.blocked{
+  overflow: hidden;
+}
+
+.page{
+  position: relative;
+}
+
+.container{
+  position: relative;
+  padding: 0 30px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1230px;
+  @include w600{
+    padding: 0 15px;
+  }
+}
+
+.link-block{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+
+.icon{
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.logo{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 83px;
+  height: 83px;
+  border: 8px solid;
+  border-right: none;
+  &::before,
+  &::after{
+    position: absolute;
+    right: 0;
+    display: block;
+    content: '';
+    width: 8px;
+    height: 14px;
+  }
+  &::before{
+    top: 0;
+  }
+  &::after{
+    bottom: 0;
+  }
+  &--light{
+    border-color: $color-white;
+    color: $color-white;
+    &::before,
+    &::after{
+      background: $color-white;
+    }
+  }
+  &--dark{
+    border-color: $color-gray;
+    color: $color-gray;
+    &::before,
+    &::after{
+      background: $color-gray;
+    }
+  }
+  &-text{
+    position: relative;
+    height: 38px;
+    left: 1px;
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.357;
+    text-align: right;
+  }
+}
+
+.social{
+  &-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3px;
+    height: 38px;
+    width: 38px;
+    line-height: 38px;
+    font-size: 20px;
+    color: $color-white;
+    //background: red;
+    &:last-of-type{
+      margin-right: 0;
+    }
+    &:hover,
+    &:focus,
+    &:active{
+      color: $color-yellow;
+    }
+    &-list{
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+//img
+.img{
+ @include transfXY;
+  display: block;
+  @include tr;
+  &-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+//title
+.section-title{
+  &__large{
+    margin: 0 0 20px;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: $color-white;
+    text-transform: uppercase;
+    &--decorated{
+      position: relative;
+      &::before{
+        position: absolute;
+        bottom: -20px;
+        display: block;
+        width: 40px;
+        height: 5px;
+        background: $color-white;
+        content: '';
+      }
+    }
+  }
+}
+
+.form{
+  &-row {
+    display: flex;
+    position: relative;
+    margin-bottom: 25px;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+  &-field,
+  &-textarea{
+    padding: 15px;
+    width: 100%;
+    border: none;
+    outline: none;
+    //@include input-placeholder{
+    //  color: $color-white;
+    //  font-size: 18px;
+    //}
+  }
+  &-field{
+    height: 45px;
+  }
+  &-subscription{
+    &-field{
+      color: $color-main;
+      @include input-placeholder{
+        color: $color-cyan;
+      }
+    }
+  }
+}
+
+
+//sprite
+.drop,
+.flash,
+.light,
+.settings,
+.gear,
+.instagram,
+.location,
+.pdf {
+  display: inline-block;
+  background: url('../img/sprite-main.png') no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-align: left;
+}
+
+.drop { background-position: -20px -0px; width: 83px; height: 83px; }
+.flash { background-position: -20px -103px; width: 83px; height: 83px; }
+.light { background-position: -20px -206px; width: 83px; height: 83px; }
+.settings { background-position: -20px -309px; width: 83px; height: 83px; }
+.gear { background-position: -20px -412px; width: 73px; height: 73px; }
+.instagram { background-position: -20px -505px; width: 71px; height: 72px; }
+.location { background-position: -20px -597px; width: 54px; height: 71px; }
+.pdf { background-position: -20px -688px; width: 53px; height: 71px; }
+
+//download-block
+
+.link-block{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &__icon{
+    display: block;
+    margin-bottom: 15px;
+  }
+  &__description{
+    font-size: 12px;
+    color: $color-main;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+}
+
+
+.triangl-decor{
+  &--top,
+  &--bottom{
+    position: relative;
+    &::before{
+      @include transfX;
+      z-index: 3;
+      display: block;
+      border: 10px solid transparent;
+      content: '';
+      @include w1024{
+        display: none;
+      }
+    }
+  }
+  &--top{
+    &::before{
+      top: -20px;
+      border-bottom: 10px solid $color-white;
+    }
+  }
+  &--bottom{
+    &::before{
+      bottom: -20px;
+      border-top: 10px solid $color-white;
+    }
+  }
+  &--left{}
+  &--right{}
+}
+.text{
+  &--dark{
+    color: $color-gray;
+  }
+  &--light{
+    color: $color-light-text;
+  }
+}
+
+.article{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: $color-white;
+  padding: 25px 30px;
+  &-title{
+    position: relative;
+    margin: 0 0 35px;
+    padding-right: 60px;
+    font-weight: bold;
+    &:hover,
+    &:focus,
+    &:active{
+      &::before {
+        width: 0;
+        @include tr;
+      }
+      &::after{
+        height: 40px;
+      }
+    }
+    &::after{
+      position: absolute;
+      display: block;
+      height: 5px;
+      width: 5px;
+      bottom: -15px;
+      left: -8px;
+      background: $color-main;
+      content: '';
+      @include tr;
+    }
+    &::before{
+      position: absolute;
+      bottom: -15px;
+      left: -3px;
+      display: block;
+      height: 5px;
+      width: 40px;
+      background: $color-main;
+      content: '';
+      @include tr;
+    }
+
+    &--large{
+      font-size: 28px;
+      font-weight: bold;
+      @include w960{
+        padding-right:0;
+      }
+    }
+    &--light{
+      color: $color-white;
+      &::before{
+        background: $color-white;
+      }
+    }
+  }
+  &-description{
+    &__text{
+      margin-bottom: 15px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+//login form styles
+.form-login{
+  &__field{
+    background: $color-white;
+    &:-webkit-autofill{
+      -webkit-box-shadow: 0 0 0 30px $color-white inset;
+    }
+    &--login,
+    &--pass{
+      border: 1px solid $color-gray-cloud;
+    }
+  }
+  &__checkbox{
+    @include transfY;
+    opacity: 0;
+    height: 16px;
+    width: 16px;
+    z-index:3;
+    &:checked{
+      &~.form-login__checkbox-block{
+        .form-login__checkbox-checked{
+          color:  $color-gray;
+          @include tr;
+        }
+      }
+    }
+    &-block{
+      display: flex;
+      align-items: center;
+      align-self: center;
+      height: 16px;
+      width: 16px;
+      background: $color-white;
+      border-radius: 4px;
+      border: 1px solid $color-gray-cloud;
+    }
+    &-checked{
+      color: $color-white;
+      @include tr;
+    }
+  }
+  &__submit{
+    @extend .btn;
+    position: relative;
+    margin-left: auto;
+    padding: 10px 0;
+    width: 100%;
+    max-width: 120px;
+    background: $color-cyan;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    @include tr;
+    &:hover,
+    &:focus,
+    &:active{
+      &::after,
+      &::before{
+        width: 100%;
+        background: rgba($color-gray, 0.9);
+        @include tr;
+      }
+    }
+    &::after,
+    &::before{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: block;
+      width: 0;
+      height: 100%;
+      content: '';
+      @include tr;
+    }
+    &::after{
+      right: 0;
+    }
+    &::before{
+      left: 0;
+    }
+    &-text{
+      z-index: 3;
+    }
+  }
+}
+
+
+
+
